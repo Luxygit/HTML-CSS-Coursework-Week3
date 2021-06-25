@@ -1,1 +1,117 @@
 /*  Add your styling here */
+body {
+  width: 100%;
+  font-family: "Pacifico", cursive;
+  margin: 0;
+  padding: 0;
+  color: rgb(221, 240, 112);
+}
+body * {
+  text-shadow: -1px 1px 0 darkgreen, 1px 1px 0 darkgreen, 1px -1px 0 darkgreen;
+}
+
+nav {
+  height: 65px;
+  background-color: rgb(23, 100, 23);
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-end;
+}
+nav ul {
+  display: none;
+}
+#menuicon {
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+}
+header {
+  background: url(img/header\ small.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 200px;
+}
+header h3 {
+  width: 60%;
+
+  font-size: 27px;
+}
+#welcomesection {
+  background: url(img/Neon\ cake\ small.jpg);
+  height: 450px;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+#welcomesection h2 {
+  font-size: 40px;
+}
+#welcomesection p {
+  font-size: 25px;
+}
+#gallerysection {
+  background-color: rgb(23, 100, 23);
+  height: 1300px;
+}
+#gallerysection h2 {
+  font-size: 40px;
+  position: relative;
+  top: 10px;
+  margin-top: 0px;
+}
+.gallery {
+  border: 2px inset #ccc;
+  width: 48.499%;
+  height: 280px;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.gallery:hover {
+  border: 2px solid #777;
+  /* insert cool animation here*/
+}
+.gallery img {
+  width: 100%;
+  height: 200px;
+}
+.gallery p {
+  text-align: center;
+}
+footer {
+  background-color: rgb(23, 100, 23);
+  height: 100px;
+}
+footer img {
+  width: 25px;
+}
+footer p {
+  font-size: 25px;
+  text-align: center;
+  margin-top: 0;
+}
+footer div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media only screen and (min-width: 540px) {
+  .gallery {
+    width: 24%;
+  }
+  #gallerysection {
+    height: 700px;
+  }
+}
