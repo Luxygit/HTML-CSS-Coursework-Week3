@@ -14,7 +14,13 @@ body * {
 
 nav {
   height: 65px;
-  background-color: rgb(23, 100, 23);
+  background: linear-gradient(
+      217deg,
+      rgba(255, 0, 0, 0.8),
+      rgba(255, 0, 0, 0) 70.71%
+    ),
+    linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
+    linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -62,7 +68,13 @@ header h3 {
   font-size: 25px;
 }
 #gallerysection {
-  background-color: rgb(23, 100, 23);
+  background: linear-gradient(
+      217deg,
+      rgba(255, 0, 0, 0.8),
+      rgba(255, 0, 0, 0) 70.71%
+    ),
+    linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
+    linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
   height: 1300px;
 }
 .gallerycolumn {
@@ -130,9 +142,16 @@ header h3 {
   text-align: center;
 }
 footer {
-  background-color: rgb(23, 100, 23);
+  background: linear-gradient(
+      217deg,
+      rgba(255, 0, 0, 0.8),
+      rgba(255, 0, 0, 0) 70.71%
+    ),
+    linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
+    linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
   height: 100px;
   padding-bottom: 50px;
+  padding-top: 30px;
 }
 footer img {
   width: 35px;
@@ -159,6 +178,9 @@ footer div {
     padding-left: 10px;
     padding-right: 40px;
     width: 100%;
+  }
+  .gallery img {
+    object-fit: cover;
   }
   nav li {
     display: inline;
@@ -245,6 +267,9 @@ footer div {
   #welcomesection p {
     font-size: 34px;
     text-align: center;
+  }
+  .gallery img {
+    object-fit: cover;
   }
   #galleryrow {
     flex-direction: column;
