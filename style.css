@@ -4,10 +4,12 @@ body {
   font-family: "Pacifico", cursive;
   margin: 0;
   padding: 0;
-  color: rgb(221, 240, 112);
+  color: rgb(112, 240, 172);
+  letter-spacing: 2px;
 }
 body * {
-  text-shadow: -1px 1px 0 darkgreen, 1px 1px 0 darkgreen, 1px -1px 0 darkgreen;
+  text-shadow: -1px 1px 0 darkgreen, 1px 1px 0 darkgreen,
+    1px -1px 0 rgb(0, 0, 0), -1px -1px 0 darkgreen;
 }
 
 nav {
@@ -28,7 +30,7 @@ nav ul {
   margin-right: 15px;
 }
 header {
-  background: url(img/header\ small.jpg);
+  background: url(img/background1.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -43,9 +45,8 @@ header h3 {
   font-size: 27px;
 }
 #welcomesection {
-  background: url(img/Neon\ cake\ small.jpg);
+  background: url(img/Neon\ cake\ large.jpg);
   height: 450px;
-
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -64,6 +65,21 @@ header h3 {
   background-color: rgb(23, 100, 23);
   height: 1300px;
 }
+.gallerycolumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-basis: 100%;
+  flex: 1;
+}
+#galleryrow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
 #gallerysection h2 {
   font-size: 40px;
   position: relative;
@@ -71,18 +87,41 @@ header h3 {
   margin-top: 0px;
 }
 .gallery {
-  border: 2px inset #ccc;
-  width: 48.499%;
+  border: 1px inset #ccc;
+  width: 90%;
   height: 280px;
-  float: left;
-  display: flex;
+
+  display: block;
   flex-direction: column;
   align-items: center;
 }
 .gallery:hover {
   border: 2px solid #777;
-  /* insert cool animation here*/
+  animation: glitch 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both 5;
+  animation-duration: alternate;
+  background: black;
 }
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-5px, 5px);
+  }
+  40% {
+    transform: translate(-5px, -5px);
+  }
+  60% {
+    transform: translate(5px, 5px);
+  }
+  80% {
+    transform: translate(5px, -5px);
+  }
+  to {
+    transform: translate(0);
+  }
+}
+
 .gallery img {
   width: 100%;
   height: 200px;
@@ -93,9 +132,10 @@ header h3 {
 footer {
   background-color: rgb(23, 100, 23);
   height: 100px;
+  padding-bottom: 50px;
 }
 footer img {
-  width: 25px;
+  width: 35px;
 }
 footer p {
   font-size: 25px;
@@ -105,13 +145,114 @@ footer p {
 footer div {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
 }
+
 @media only screen and (min-width: 540px) {
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
+    padding-left: 10px;
+    padding-right: 40px;
+    width: 100%;
+  }
+  nav li {
+    display: inline;
+  }
+  nav a {
+    text-decoration: none;
+    font-weight: 400;
+    color: rgb(112, 240, 172);
+    text-shadow: -1px 1px 0 darkgreen, 1px 1px 0 darkgreen,
+      1px -1px 0 rgb(0, 0, 0), -1px -1px 0 darkgreen;
+  }
+  nav a:hover {
+    color: rgb(113, 195, 120);
+    filter: invert(75%);
+  }
+  #menuicon {
+    display: none;
+  }
+  header h3 {
+    font-size: 35px;
+  }
+  #welcomesection {
+    background: url(img/backgroun\ 2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  #welcomesection p {
+    font-size: 34px;
+    text-align: center;
+  }
   .gallery {
-    width: 24%;
+    width: 90%;
+  }
+
+  footer img {
+    width: 50px;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  footer div {
+    justify-content: space-around;
+    width: 60%;
+    align-self: center;
+  }
+}
+@media only screen and (min-width: 900px) {
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
+    padding-left: 10px;
+    padding-right: 40px;
+    width: 100%;
+  }
+  nav li {
+    display: inline;
+  }
+  nav a {
+    text-decoration: none;
+    font-weight: 400;
+    color: rgb(112, 240, 172);
+    text-shadow: -1px 1px 0 darkgreen, 1px 1px 0 darkgreen,
+      1px -1px 0 rgb(0, 0, 0), -1px -1px 0 darkgreen;
+  }
+  nav a:hover {
+    color: rgb(113, 195, 120);
+    filter: invert(75%);
+  }
+  #menuicon {
+    display: none;
+  }
+  header h3 {
+    font-size: 35px;
+  }
+  #welcomesection h2 {
+    font-size: 65px;
+  }
+  #welcomesection p {
+    font-size: 34px;
+    text-align: center;
+  }
+  #galleryrow {
+    flex-direction: column;
+  }
+  .gallerycolumn {
+    flex-direction: row;
   }
   #gallerysection {
-    height: 700px;
+    height: 750px;
   }
 }
